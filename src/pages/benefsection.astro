@@ -1,0 +1,57 @@
+---
+import CardBe from "./components/microcomponents/Cardbene.astro";
+---
+
+<link rel="text/css" href="src/main.css" />
+
+<style>
+  #cardContainer {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    #cardContainer {
+      flex-direction: row;
+      gap: 8px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    #cardContainer {
+      gap: 40.41px;
+    }
+  }
+  @media (min-width: 1280px) {
+    #cardContainer {
+      gap: 89.7px;
+    }
+  }
+</style>
+<h1>Beneficios Clave</h1>
+<div id="cardContainer">
+  <CardBe
+    iconSet="./icons/monitorhealt.svg"
+    tittleSet="Control de Inventario Personal"
+    descriptionSet="Mantén un seguimiento detallado de tus medicamentos, su cantidad y fecha de vencimiento."
+  />
+
+  <CardBe
+    iconSet="./icons/sos.svg"
+    tittleSet="Notificaciones de Bajo Stock"
+    descriptionSet="Mantén un seguimiento detallado de cuales medicamentos te faltan en tu inventario."
+  />
+
+  <CardBe
+    iconSet="./icons/medicalbag.svg"
+    tittleSet="Historial de Medicamentos"
+    descriptionSet="Lleva un registro de los medicamentos que has utilizado, para un mejor control en el futuro."
+  />
+</div>

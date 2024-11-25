@@ -1,0 +1,62 @@
+---
+const { iconSet, tittleSet, descriptionSet } = Astro.props;
+---
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 239px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 21px;
+    padding: 22px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+
+  .card img {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 8px;
+  }
+
+  .card h1 {
+    font-size: 20px;
+    width: 195px;
+    margin: 8px;
+  }
+
+  .card p {
+    font-size: 13px;
+    width: 200px;
+  }
+
+  @media (min-width: 1280px) {
+    .card {
+      width: 364.381px;
+    }
+    .card h1 {
+      font-size: 32px;
+      width: 312px;
+      margin: 8px;
+    }
+
+    .card p {
+      font-size: 16px;
+      width: 297.233px;
+    }
+    .card img {
+      width: 88.408px;
+      height: 88.408px;
+      margin-bottom: 8px;
+    }
+  }
+</style>
+
+<div class="card">
+  <img src={iconSet || "/default-icon.png"} alt="icon" />
+  <h1>{tittleSet || "Título por defecto"}</h1>
+  <p>{descriptionSet || "Descripción por defecto"}</p>
+</div>

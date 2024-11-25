@@ -1,0 +1,85 @@
+---
+const { title, description, imgSrc, imgAlt } = Astro.props;
+import Navbar from "./components/navbar.astro";
+---
+
+<link rel="text/css" href="src/main.css" />
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  #headContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    #headContainer {
+      display: flex;
+      height: 393px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .textContainer {
+      width: 305px;
+    }
+    p {
+      text-align: start;
+      width: 261px;
+    }
+    h1 {
+      text-align: start;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .textContainer {
+      width: 485px;
+    }
+    #headContainer {
+      height: 80vh;
+    }
+    #subjectwoman {
+      height: 447.84px;
+      width: auto;
+    }
+    p {
+      width: 435px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .textContainer {
+      width: 633px;
+    }
+    #subjectwoman {
+      height: 494.994px;
+      width: auto;
+    }
+    p {
+      width: 543px;
+    }
+  }
+</style>
+
+<body>
+  <Navbar />
+  <div id="headContainer">
+    <div class="textContainer">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+    <img id="subjectwoman" src={imgSrc} alt={imgAlt} />
+  </div>
+</body>

@@ -1,0 +1,82 @@
+---
+import Button from "./microcomponents/buttton.astro";
+---
+<link rel="stylesheet" href="/src/main.css">
+<style>
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary-blue);
+}
+
+#navSection{
+    display: none;
+    color: var(--neutral-black);
+}
+
+.socialIcons{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    vertical-align: middle;
+    gap: 17px;
+}
+.Iconssocial{
+    display: none;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 1280px) {
+  #navSection{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    color: var(--neutral-black);
+  }
+
+  #logoandnav{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+  }
+  .colorNav{
+    color: var(--neutral-black);
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .Iconssocial{
+    display: flex;
+    gap: 17px;
+    vertical-align: middle;
+}
+}
+
+</style>
+
+<div class="container">
+    <div id="logoandnav"><img src="/public/logo-medichest.svg" alt="">
+        <ul id="navSection">
+            <a class="colorNav" href="#home">Inicio</a>
+            <a class="colorNav" href="./src/pages/benef.astro">Beneficios</a>
+            <a class="colorNav" href="#about">Apoyanos</a>
+            <a class="colorNav" href="#contact">Descargar</a>
+        </ul></div>
+        <div class="socialIcons">
+            <div class="Iconssocial">
+            <img src="/public/icons/facebook.svg" alt="Facebook">
+            <img src="/public/icons/twitter.svg" alt="X">
+            <img src="/public/icons/instagram.svg" alt="Instagram">
+            </div>
+            <Button text="Obtener" iconSrc="/public/icons/healtbox.svg" href="" />
+            </div>
+</div>
