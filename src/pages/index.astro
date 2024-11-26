@@ -1,26 +1,56 @@
 ---
 import Devpage from "./devpage.astro";
-import Head from "./head.astro";
+import Hero from "./head.astro";
 import Sectionbenef from "./benefsection.astro";
+import InfoSection from "./infosec.astro";
+import ReviewSection from "./review.astro";
 ---
-
-
+<head>
+  
+</head>
+<style>
+  InfoSection {
+	visibility: hidden;
+  }
+</style>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>medichest</title>
+    <title>Medichest</title>
   </head>
   <body>
-    <Head
+    <Hero
       title="La forma más fácil de gestionar tus medicamentos"
       description="Asegúrate de tener siempre los medicamentos que necesitas en casa."
       imgSrc="/images/subject-womanhealt.svg"
       imgAlt="womanhealt.svg"
     />
 	  <Sectionbenef />
+    
+    <InfoSection
+      icoButtton="/icons/handdonate.svg"
+      textButton="Donar"
+      hrfButton=""
+      title="Apóyanos para mejorar Medichest"
+      description="Medichest es gratuita pero su mejora y mantenimiento dependen de donaciones voluntarias, tu apoyo permite añadir funciones útiles, mantener la app accesible para todos y garantizar soporte continuo, como agradecimiento recibirás una insignia de colaborador y acceso anticipado a funciones nuevas."
+      imgSrc="/images/alzhaimer.svg"
+      imgAlt="womanhealt.svg"
+    />
+    
+    <ReviewSection />
+
+    <InfoSection
+      icoButtton="/public/icons/healtbox.svg"
+      textButton="Descargar"
+      hrfButton=""
+      title="Medichest, tu gestor de medicamentos"
+      description="Organiza tu inventario, mantente informado y asegura el bienestar de tu familia. Empieza a usar Medichest hoy."
+      imgSrc="/images/appview.png"
+      imgAlt="womanhealt.svg"
+    />
 
   </body>
 </html>

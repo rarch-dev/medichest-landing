@@ -1,17 +1,21 @@
 ---
-const { title, description, imgSrc, imgAlt } = Astro.props;
+const { title, description, imgSrc, imgAlt, textButton, icoButtton, hrfButton } = Astro.props;
 import Navbar from "./components/navbar.astro";
-
+import Button from "./components/microcomponents/buttton.astro";
 ---
 
-<link rel="text/css" href="src/main.css" />
-<link rel="stylesheet" href="/src/pages/library/css/animation.css">
+<head>
+  <link rel="text/css" href="src/main.css" />
+  <link rel="stylesheet" href="/src/pages/library/css/animation.css">
+</head>
+
 <style>
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   p {
     text-align: center;
   }
@@ -22,7 +26,16 @@ import Navbar from "./components/navbar.astro";
   #headContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
 
   @media (min-width: 768px) {
     #headContainer {
@@ -35,6 +48,8 @@ import Navbar from "./components/navbar.astro";
 
     .textContainer {
       width: 305px;
+      align-items: start;
+      justify-content: space-between;
     }
     p {
       text-align: start;
@@ -70,19 +85,18 @@ import Navbar from "./components/navbar.astro";
       width: auto;
     }
     p {
-      width: 543px;
+      width: 660px;
     }
   }
 </style>
 
 <body>
-  <Navbar />
   <div id="headContainer">
     <div class="textContainer">
       <h1>{title}</h1>
       <p>{description}</p>
-
+      <Button text={textButton} iconSrc={icoButtton} href={hrfButton} />
     </div>
-    <img class="slideUp" id="subjectwoman" src={imgSrc} alt={imgAlt} />
+    <img class="slideLeft" id="subjectwoman" src={imgSrc} alt={imgAlt} />
   </div>
 </body>

@@ -7,7 +7,7 @@ const { text, iconSrc, href } = Astro.props;
     color: var(--pure-white);
     font-family: var(--font-main);
     font-weight: 500;
-    width: auto;
+    width: 104px;
     height: 30px;
     display: flex;
     flex-direction: row;
@@ -28,9 +28,12 @@ const { text, iconSrc, href } = Astro.props;
     height: 16px;
     width: 16px;
   }
+  #buttonText{
+    font-size: 16px;
+  }
 </style>
 
 <a class="Button" href={href}>
   {iconSrc && <img src={iconSrc} alt="" />}
-  {text}
+  <p id="buttonText">{text}</p>
 </a>
