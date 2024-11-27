@@ -1,5 +1,5 @@
 ---
-const { title, description, imgSrc, imgAlt, textButton, icoButtton, hrfButton } = Astro.props;
+const { title, description, imgSrc, imgAlt, textButton, icoButtton, hrfButton, identify } = Astro.props;
 import Navbar from "../navbar.astro";
 import Button from "../microcomponents/buttton.astro";
 ---
@@ -90,12 +90,14 @@ import Button from "../microcomponents/buttton.astro";
 </style>
 
 <body>
-  <div id="headContainer">
-    <div class="textContainer">
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <Button text={textButton} iconSrc={icoButtton} href={hrfButton} />
+  <div id={identify}>
+    <div id="headContainer">
+      <div class="textContainer">
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <Button text={textButton} iconSrc={icoButtton} href={hrfButton} />
+      </div>
+      <img class="slideLeft" id="subjectwoman" src={imgSrc} alt={imgAlt} />
     </div>
-    <img class="slideLeft" id="subjectwoman" src={imgSrc} alt={imgAlt} />
   </div>
 </body>
