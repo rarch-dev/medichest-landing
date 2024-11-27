@@ -1,25 +1,11 @@
 ---
-import Devpage from "./devpage.astro";
-import Hero from "./hero.astro";
-import Sectionbenef from "./benefsection.astro";
-import InfoSection from "./infosec.astro";
-import ReviewSection from "./review.astro";
+import Hero from "../components/home/hero.astro";
+import Sectionbenef from "../components/home/benefsection.astro";
+import InfoSection from "../components/home/infosec.astro";
+import ReviewSection from "../components/home/review.astro";
+import MainLayout from "../layout/main-layout.astro";
 ---
-
-<style>
-  InfoSection {
-    visibility: hidden;
-  }
-</style>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Medichest</title>
-  </head>
-  <body>
+<MainLayout>
     <Hero
       title="La forma más fácil de gestionar tus medicamentos"
       description="Asegúrate de tener siempre los medicamentos que necesitas en casa."
@@ -49,5 +35,4 @@ import ReviewSection from "./review.astro";
       imgSrc="/images/appview.png"
       imgAlt="womanhealt.svg"
     />
-  </body>
-</html>
+</MainLayout>

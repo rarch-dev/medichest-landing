@@ -1,7 +1,16 @@
 ---
+import MainLayout from "../layout/main-layout.astro";
+
 
 ---
-<link rel="stylesheet" href="src/main.css">
+<MainLayout>
+    <div class="Container">
+        <img src="./images/Checking boxes-bro 1.svg" alt="404 ilustración">
+        <h1>Ups!, pagina <br>no encontrada</h1>
+        <p>Hola, regresa a la pagina anterior, ya que <br>la pagina que intentas buscar no se cuentra</p>
+    </div>
+</MainLayout>
+
 <style>
     .Container{
         display: flex;
@@ -22,8 +31,3 @@
         text-align: center;
     }
 </style>
-<div class="Container">
-    <img src="./images/Checking boxes-bro 1.svg" alt="404 ilustración">
-    <h1>Ups!, pagina <br>no encontrada</h1>
-    <p>Hola, regresa a la pagina anterior, ya que <br>la pagina que intentas buscar no se cuentra</p>
-</div>

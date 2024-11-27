@@ -1,7 +1,24 @@
 ---
 import Button from "./microcomponents/buttton.astro";
 ---
-<link rel="stylesheet" href="/src/main.css">
+<div class="container">
+    <div id="logoandnav"><img src="/public/logo-medichest.svg" alt="">
+        <ul id="navSection">
+            <a class="colorNav" href="/#hero">Inicio</a>
+            <a class="colorNav" href="/#beneficios">Beneficios</a>
+            <a class="colorNav" href="/about">Apoyanos</a>
+            <a class="colorNav" href="/contact">Descargar</a>
+        </ul></div>
+        <div class="socialIcons">
+            <div class="Iconssocial">
+            <img src="/public/icons/facebook.svg" alt="Facebook">
+            <img src="/public/icons/twitter.svg" alt="X">
+            <img src="/public/icons/instagram.svg" alt="Instagram">
+            </div>
+            <Button text="Obtener" iconSrc="/public/icons/healtbox.svg" href="" />
+            </div>
+</div>
+
 <style>
     .container{
         display: flex;
@@ -62,21 +79,3 @@ a:hover{
 }
 
 </style>
-
-<div class="container">
-    <div id="logoandnav"><img src="/public/logo-medichest.svg" alt="">
-        <ul id="navSection">
-            <a class="colorNav" href="#home">Inicio</a>
-            <a class="colorNav" href="/src/pages/benefsection.astro">Beneficios</a>
-            <a class="colorNav" href="#about">Apoyanos</a>
-            <a class="colorNav" href="#contact">Descargar</a>
-        </ul></div>
-        <div class="socialIcons">
-            <div class="Iconssocial">
-            <img src="/public/icons/facebook.svg" alt="Facebook">
-            <img src="/public/icons/twitter.svg" alt="X">
-            <img src="/public/icons/instagram.svg" alt="Instagram">
-            </div>
-            <Button text="Obtener" iconSrc="/public/icons/healtbox.svg" href="" />
-            </div>
-</div>

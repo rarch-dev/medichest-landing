@@ -1,11 +1,7 @@
 ---
 const { title, description, imgSrc, imgAlt } = Astro.props;
-import Navbar from "./components/navbar.astro";
-
 ---
-
-<link rel="text/css" href="src/main.css" />
-<link rel="stylesheet" href="/src/pages/library/css/animation.css">
+<link rel="stylesheet" href="/css/animation.css">
 <style>
   body {
     display: flex;
@@ -76,7 +72,6 @@ import Navbar from "./components/navbar.astro";
 </style>
 
 <body>
-  <Navbar />
   <div id="headContainer">
     <div class="textContainer">
       <h1>{title}</h1>
