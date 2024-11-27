@@ -1,16 +1,14 @@
 ---
 import Devpage from "./devpage.astro";
-import Hero from "./head.astro";
+import Hero from "./hero.astro";
 import Sectionbenef from "./benefsection.astro";
 import InfoSection from "./infosec.astro";
 import ReviewSection from "./review.astro";
 ---
-<head>
-  
-</head>
+
 <style>
   InfoSection {
-	visibility: hidden;
+    visibility: hidden;
   }
 </style>
 <html lang="en">
@@ -28,8 +26,8 @@ import ReviewSection from "./review.astro";
       imgSrc="/images/subject-womanhealt.svg"
       imgAlt="womanhealt.svg"
     />
-	  <Sectionbenef />
-    
+    <Sectionbenef />
+
     <InfoSection
       icoButtton="/icons/handdonate.svg"
       textButton="Donar"
@@ -39,7 +37,7 @@ import ReviewSection from "./review.astro";
       imgSrc="/images/alzhaimer.svg"
       imgAlt="womanhealt.svg"
     />
-    
+
     <ReviewSection />
 
     <InfoSection
@@ -51,6 +49,5 @@ import ReviewSection from "./review.astro";
       imgSrc="/images/appview.png"
       imgAlt="womanhealt.svg"
     />
-
   </body>
 </html>
